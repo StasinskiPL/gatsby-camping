@@ -8,10 +8,10 @@ const Navbar = ({setOpenSlider}) => {
     <nav className="navbar">
       <div className="navbar-inner">
         <div className="navbar__header">
-          <Link to="/" className="navbar__header-logo">
+          <Link to="/" className="navbar__header-logo" aria-label="Camping">
             <FaCampground /> Camping
           </Link>
-          <button onClick={()=>setOpenSlider(true)} className="navbar__header-btn">
+          <button onClick={()=>setOpenSlider(true)} className="navbar__header-btn" aria-label="open slider">
             <FaBars />
           </button>
         </div>

@@ -19,7 +19,7 @@ const Hero = () => {
       <div>
         <div>
           <h1>Camping Forest</h1>
-          <h3>Best place to spend your free time</h3>
+          <h2>Best place to spend your free time</h2>
         </div>
       </div>
     </BackgroundImage>
@@ -28,7 +28,7 @@ const Hero = () => {
 
 const query = graphql`
   {
-    file(relativePath: { eq: "camping.png" }) {
+    file(relativePath: { eq: "camping.webp" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

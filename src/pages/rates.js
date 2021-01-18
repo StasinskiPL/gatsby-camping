@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 const rates = ({ data }) => {
   const {
@@ -13,6 +14,7 @@ const rates = ({ data }) => {
   const pricesInfo = info.find(i => i.data.name === "currency")
   return (
     <Layout>
+      <SEO title="Rates | Camping Forest" />
       <section className="rates section">
         <div className="rates-inner">
           <table>

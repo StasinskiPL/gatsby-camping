@@ -9,7 +9,7 @@ const Slider = ({openSlider,setOpenSlider}) => {
         <aside className={`slider ${openSlider ? "active" : ""}`}>
             <div className="slider-inner">
                 <div className="slider-header">
-                    <button onClick={()=>setOpenSlider(false)}>
+                    <button onClick={()=>setOpenSlider(false)} aria-label="close slider">
                         <FaTimes/>
                     </button>
                         </div>
@@ -17,7 +17,7 @@ const Slider = ({openSlider,setOpenSlider}) => {
                         {links.map((link,index)=>{
                             return(
                                 <li className="slider-link" key={index}>
-                                    <Link to={link.url}
+                                    <Link to={link.url} 
                                     activeClassName="active" >
                                         {link.name}
                                     </Link>
