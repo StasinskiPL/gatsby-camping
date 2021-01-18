@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$max-width: 1200px;
+$medium-width: 768px;
+$tablet-width: 550px;
+
+$color-main :  rgb(40, 185, 64);
+$color-main-darker: rgb(20, 143, 41);
+
+body {
+  font-family: "Lato", open-Sans;
+}
+
+main{
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 1fr auto;
+}
+
+
+@mixin maxWidth {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+@mixin mediumMd {
+  @media screen and (min-width: $medium-width) {
+    @content;
+  }
+}
+@mixin tabletMd {
+  @media screen and (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+.section {
+  @include maxWidth;
+}
+
+
+
+
+
+

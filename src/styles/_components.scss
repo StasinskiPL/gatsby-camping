@@ -1,0 +1,108 @@
+.hero-bg {
+  min-height: 100vh;
+  & > div {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    & > div {
+      margin-top: -5rem;
+      h1 {
+        font-size: 4rem;
+        text-align: center;
+        @include mediumMd() {
+          font-size: 7rem;
+        }
+      }
+      h3 {
+        font-size: 1.25rem;
+        text-align: center;
+        @include mediumMd() {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.error-section {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link {
+    align-self: center;
+    text-align: center;
+    max-width: 180px;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    background-color: $color-main;
+    border-radius: 0.4rem;
+    color: black;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $color-main-darker;
+      color: rgb(27, 26, 26);
+    }
+  }
+}
+
+
+.contact{
+  margin-top: 2rem;
+  width: 100%;
+  &-inner{
+    padding: 0.5rem;
+    @include maxWidth;
+    min-height: 60vh;
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    @include mediumMd{
+    justify-content: space-between;
+    padding: 1rem;
+      grid-template-columns: 4fr 6fr;
+    }
+  }
+  &-item{
+    h2{
+      padding: 0.5rem 1rem;
+    }
+    span{
+      font-weight: 400;
+    }
+  }
+  &-map{
+    border: 5px solid $color-main-darker;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    max-height: 700px;
+  }
+}
+
+
+
+
+.footer{
+  background-color: $color-main;
+  margin-top: 4rem;
+  box-shadow: 0px 0px 3px $color-main-darker;
+  &-inner{
+      padding: 1rem;
+      text-align: center;
+      @include maxWidth;
+    }
+}

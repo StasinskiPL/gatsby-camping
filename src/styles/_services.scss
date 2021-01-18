@@ -1,0 +1,31 @@
+.services {
+  display: grid;
+  @include maxWidth;
+
+  margin-top: 3rem;
+  gap: 1rem;
+  @include tabletMd {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mediumMd {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.service {
+  padding: 1rem;
+  
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &-icon {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+  }
+}

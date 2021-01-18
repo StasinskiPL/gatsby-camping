@@ -1,0 +1,161 @@
+.navbar {
+    background-color: $color-main;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px -2px 7px 1px  rgba(#000,0.7);
+
+    &-inner {
+        @include maxWidth;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        align-items: center;
+
+        &-logo {
+            font-size: 2rem;
+            color: black;
+            text-decoration: none;
+            font-style: italic;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #363636;
+            }
+        }
+
+        &-btn {
+            background-color: transparent;
+            border: transparent;
+            font-size: 2rem;
+            color: black;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            svg {
+                vertical-align: middle;
+            }
+
+            @include mediumMd {
+                display: none;
+            }
+
+            &:hover {
+                color: #363636;
+            }
+        }
+    }
+
+    &__links {
+        display: none;
+        margin-right: 1rem;
+
+        @include mediumMd {
+            display: flex;
+        }
+
+        align-items: center;
+
+        li {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: #363636;
+                }
+
+                &.active {
+                    border-bottom: 2px solid rgb(118, 250, 255);
+                }
+            }
+        }
+    }
+}
+
+
+.slider {
+    @include mediumMd {
+        display: none;
+    }
+
+    position: fixed;
+    z-index: 10;
+    width: 0%;
+    top:0px;
+    right: 0px;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.75s;
+    background-color: $color-main;
+
+    &.active {
+        transition: all 0.75s;
+        width: 100%;
+    }
+
+    &-inner {
+        padding: 1rem;
+
+    }
+
+    &-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.25rem 0.5rem;
+
+        button {
+            background-color: transparent;
+            border-color: transparent;
+            font-size: 2rem;
+            color: rgb(236, 49, 49);
+        }
+    }
+    &-links{
+        margin-top: 5rem;
+    }
+    &-link{
+        padding: 1rem 0.75rem;
+        list-style: none;
+        a{
+            text-align: center;
+            font-size: 2rem;
+            text-decoration: none;
+            display: block;
+            color: black;
+            width: 100%;
+            transform: all 0.3s;
+            position: relative;
+            &.active {
+                &::after{
+                    position: absolute;
+                    content: "";
+                    left: 35%;
+                    bottom: 0;
+                    width: 30%;
+                    height: 2px;
+                    background-color:  rgb(118, 250, 255);
+                    border-radius: 10rem;
+                }
+            }
+            &:hover{
+                color:#353535;
+                border-radius: 0.3rem;
+                background-color: rgba(0,0,0,0.2);
+            }
+            
+        }
+    }
+}
